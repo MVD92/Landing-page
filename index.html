@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masking animation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
+        #landingpage{
+            height: 100vh;
+            width: 100%;
+            background: #0F2027;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .intro{
+            position: absolute;
+            top:61%;
+            left:30%;
+            transform: translate(-60%,-30%);
+            height:300px;
+            width: 500px;
+            opacity:0;
+            animation:show 1s linear 1s  forwards;
+            animation-iteration-count:1;
+        }
+        @keyframes show{
+            0%{
+                top:61%;
+                left:30%;
+                opacity:0;
+              
+            }
+            100%{
+                top:25%;
+                left:30%;
+                opacity:1;
+            }
+        }
+       .intro  h1{
+           margin: auto;
+           padding: 20px;
+          font-size: 35px;
+          font-family: serif;
+          letter-spacing: 5px;
+          font-weight: bold;
+          color: aliceblue;
+        }
+        .intro  p{
+           margin: auto;
+           padding: 20px;
+          font-size: 20px;
+          font-family: serif;
+          color: aliceblue;
+          letter-spacing: 5px;
+        }
+        .overlay{
+            position: absolute;
+            bottom:-1%;
+            left:0%;
+            transform: translate(0%,0%);
+        }
+        .overlay img{
+            height:350px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .avatar{
+             position: absolute;
+             top:0%;
+             right:10%;
+             height: 400px;
+             width:400px;
+        }
+         .avatar img{
+            height: 310px;
+            width:300px;
+         }
+    </style>
+</head>
+<body>
+<section id="landingpage">
+    <div class="container">
+        <div class="intro">
+        <h1>Hello there,<br>This is Antonio</h1>
+        <p>I will make your coding carrier easy!</p>
+        </div>
+        <div class="overlay">
+            <img src="coding.jpg">
+        </div>
+        <div class="avatar">
+         <img src="avatar.png">
+        </div>
+    </div>
+</section>
+<section style="height: 100vh;">
+</section>
+</body>
+</html>
